@@ -15,6 +15,7 @@ public class BotTest {
 
         Assertions.assertDoesNotThrow(() -> {
             String parsedMessage = bot.parseInput(message);
+            Assertions.assertEquals("hello there", parsedMessage);
             Assertions.assertDoesNotThrow(() -> bot.chat(parsedMessage));
         });
 
