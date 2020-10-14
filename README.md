@@ -29,7 +29,7 @@ no apparent reason. Please run via cmd (Windows) or terminal (macOS/Linux).
 
 ## Command Line Instructions
 
-Be sure you have Maven installed to follow these instructions.
+Be sure you have [Maven](https://maven.apache.org) installed to follow these instructions.
 
 1. Clone this repo. Unfortunately, it has everything in one repository.
 2. From the base (root) folder, type:
