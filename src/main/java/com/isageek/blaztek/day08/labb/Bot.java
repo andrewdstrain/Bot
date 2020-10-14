@@ -63,6 +63,7 @@ public class Bot {
 
         // Very limited sentence recognition. Hello 1980's!
         if (message == null) {
+            log.println();
             log.println("Goodbye!");    // This does work - just typically not inside the IDE's terminal window
         } else if (message.equals("how are you")) {
             log.println("I am doing well. How are you?");
@@ -79,7 +80,7 @@ public class Bot {
         } else if (message.equals("you can't") || message.equals("you can not")) {
             log.println("So true.");
         } else {
-            sing();
+            recite();
         }
     }
 
@@ -90,7 +91,7 @@ public class Bot {
         }
     }
 
-    private void sing() {
+    private void recite() {
         log.println(roses.get(line++));
 
         if (line >= 4) {
