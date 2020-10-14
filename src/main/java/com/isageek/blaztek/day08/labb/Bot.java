@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Bot {
     private final BufferedReader reader;
-    private boolean parsed;
     private PrintStream log;
+    private String parsedMessage;
     private int line;
 
     private static final List<String> wirtyDords = Arrays.asList(new String[] {"damn", "wtf", "fu"});  // Keeping it clean for school
@@ -16,8 +16,8 @@ public class Bot {
     public Bot() {
         super();
         reader = new BufferedReader(new InputStreamReader(System.in));
-        parsed = false;
         log = System.out;
+        parsedMessage = null;
         line = 0;
     }
 
@@ -31,40 +31,42 @@ public class Bot {
 
     public String parseInput(String message) throws NaughtyWordException {
         if (message == null) {
-            parsed = true;
+            parsedMessage = null;
             return null;
         }
 
-        String parsedMsg;
-
         // Get rid of multiple spaces, get rid of spaces at beginning and end, and change to lower case.
-        parsedMsg = message.replaceAll(" +", " ").trim().replaceAll("[?.!;,]$", "").toLowerCase();
+        parsedMessage = message.replaceAll(" +", " ").trim().replaceAll("[?.!;,]$", "").toLowerCase();
 
         // Loop through each word in message
-        for (String word : parsedMsg.split(" ")) {
+        for (String word : parsedMessage.split(" ")) {
             // Keep it clean folks
             if (wirtyDords.contains(word)) {
                 throw new NaughtyWordException();
             }
         }
 
-        parsed = true;
-
-        return parsedMsg;
+        return parsedMessage;
     }
 
     public void chat(String message) throws MessageNotParsedException {
         // only use parsed messages
-        if (! parsed) {
+        if (parsedMessage == null) {
+            if (message != null) {
+                throw new MessageNotParsedException();
+            }
+        } else if (! parsedMessage.equals(message)) {
             throw new MessageNotParsedException();
-        } else {
-            parsed = false;
         }
+
+        parsedMessage = null;
 
         // Very limited sentence recognition. Hello 1980's!
         if (message == null) {
             log.println();
             log.println("Goodbye!");    // This does work - just typically not inside the IDE's terminal window
+        } else if (message.equals("hi") || message.equals("hello")) {
+            log.println("Hello there!");
         } else if (message.equals("how are you")) {
             log.println("I am doing well. How are you?");
         } else if (message.equals("good") || message.equals("well") || message.equals("fine")) {
@@ -79,6 +81,10 @@ public class Bot {
             log.println("Indeed");
         } else if (message.equals("you can't") || message.equals("you can not")) {
             log.println("So true.");
+        } else if (message.equals("no")) {
+            log.println("Yes!");
+        } else if (message.equals("yes")) {
+            log.println("No!");
         } else {
             recite();
         }
