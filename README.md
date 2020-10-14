@@ -4,7 +4,7 @@ The lab text says:
 
 > Create your own exceptions and test them. **Add to Github**
 
-Feel free to _talk_ to the Bot. It have a very limited amount of phrases. If you give it a phrase that it doesn't understand, it recites poetry to you.
+Feel free to _talk_ to the Bot. It has a very limited amount of phrases. If you give it a phrase that it doesn't understand, it recites poetry to you.
 
 #### Note
 
@@ -28,7 +28,7 @@ Be sure you have Maven installed to follow these instructions.
 4. Then run it by typing:
 
    ```
-   java -jar target/labB-1.0-RC1.jar
+   java -jar target/labB-1.0-week2-day08.jar
    ```
 
 Once run, feel free to _talk_ to the Bot. It will help if you take a look at the phrases that it checks for in the [Bot.java](src/main/java/com/isageek/blaztek/day08/labb/Bot.java) file.

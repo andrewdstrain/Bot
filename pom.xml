@@ -6,7 +6,7 @@
 
     <groupId>com.is-a-geek.blaztek.day08</groupId>
     <artifactId>labB</artifactId>
-    <version>1.0-RC1</version>
+    <version>1.0-week2-day08</version>
 
     <build>
         <plugins>
