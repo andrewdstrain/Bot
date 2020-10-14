@@ -11,9 +11,8 @@ file in the `chat` method for the list of phrases that it understands.
 To exit, press the `EOF` character on your keyboard. On macOS/Linux it is CTRL-D. On Windows, it is CTRL-Z followed by
 the Enter key.
 
-#### Note
-IDEs such as IntelliJ IDEA and Eclipse does not parse END-OF_FILE (`EOF`) properly, or they just screw up for no
-apparent reason. Please run via cmd (Windows) or terminal (macOS/Linux).
+__Note:__ IDE terminals, such as IntelliJ IDEA and Eclipse, do not parse END-OF_FILE (`EOF`) properly, or they just screw up for
+no apparent reason. Please run via cmd (Windows) or terminal (macOS/Linux).
 
 ----
 
