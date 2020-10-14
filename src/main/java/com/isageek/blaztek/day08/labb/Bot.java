@@ -36,7 +36,7 @@ public class Bot {
         }
 
         // Get rid of multiple spaces, get rid of spaces at beginning and end, and change to lower case.
-        parsedMessage = message.replaceAll(" +", " ").trim().replaceAll("[?.!;,]$", "").toLowerCase();
+        parsedMessage = message.replaceAll("[?.!;,] *$", "").replaceAll(" +", " ").trim().toLowerCase();
 
         // Loop through each word in message
         for (String word : parsedMessage.split(" ")) {
