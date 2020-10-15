@@ -72,7 +72,7 @@ public class Bot {
         } else if (message.startsWith("i am")) {
             if (message.length() > 5) {
                 String name = message.substring(5, 6).toUpperCase() + message.substring(6);
-                log.println("Nice ot meet you " + name + "!");
+                log.println("Is that really you, " + name + "?");
             } else {
                 recite();
             }
@@ -91,6 +91,14 @@ public class Bot {
             log.println("Yes!");
         } else if (message.equals("yes")) {
             log.println("No!");
+        } else if (message.equals("what are you doing")) {
+            log.println("I'm talking to you.");
+        } else if (message.contains("it is")) {
+            log.println("Okay.");
+        } else if (message.contains("feeling")) {
+            log.println("I am feeling well.");
+        } else if (message.equals("violets are blue")) {
+            log.println("Hey! I'm the poet.");
         } else {
             recite();
         }
