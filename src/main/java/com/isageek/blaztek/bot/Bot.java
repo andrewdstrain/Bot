@@ -1,35 +1,26 @@
 package com.isageek.blaztek.bot;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
 
 public class Bot {
-    private final BufferedReader reader;
-    private PrintStream log;
+    private final PrintStream log;
     private String parsedMessage;
     private int line;
 
-    private static final List<String> wirtyDords = Arrays.asList(new String[] {"damn", "wtf", "fu"});  // Keeping it clean for school
+    private static final List<String> wirtyDords = Arrays.asList("damn", "wtf", "fu");  // Keeping it clean for school
     private static final List<String> roses = Arrays.asList("Roses are red.", "Violets are blue.", "I don't have a heart.", "How can I love you?");
 
     public Bot() {
         super();
-        reader = new BufferedReader(new InputStreamReader(System.in));
         log = System.out;
         parsedMessage = null;
         line = 0;
     }
 
     public String getInput() {
-        try {
-            return reader.readLine();
-        } catch (IOException e) {
-            return null;
-        }
+        return System.console().readLine();
     }
 
     public String parseInput(String message) throws NaughtyWordException {
@@ -93,12 +84,6 @@ public class Bot {
         }
     }
 
-    public void done() {
-        try {
-            reader.close();
-        } catch (IOException ignored) {
-        }
-    }
 
     private void recite() {
         log.println(roses.get(line++));

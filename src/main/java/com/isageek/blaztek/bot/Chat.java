@@ -6,6 +6,10 @@ public class Chat implements Runnable {
     }
 
     public void run() {
+        if (System.console() == null) {
+            System.err.println("Error: Run in console, not IDE");
+            System.exit(2);
+        }
         Bot bot = new Bot();
 
         System.out.println("Welcome!");
@@ -19,18 +23,17 @@ public class Chat implements Runnable {
                     text = bot.parseInput(text);
                 } catch (NaughtyWordException ex) {
                     System.err.println(ex.getMessage());
+                    continue;
                 }
 
             try {
                 bot.chat(text);
             } catch (MessageNotParsedException e) {
                 e.printStackTrace();
-                bot.done();
-                System.exit(-1);
+                System.exit(4);
             }
 
             if (text == null) {
-                bot.done();
                 break;
             }
         }
