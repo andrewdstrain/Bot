@@ -18,11 +18,11 @@ no apparent reason. Please run via cmd (Windows) or terminal (macOS/Linux).
 
 ## Quick Install and Run
 
-1. Get the JAR file from the [Releases](https://github.com/andrewdstrain/WozU-Infosys/releases/tag/Bot-1.0) section.
+1. Get the JAR file from the [Releases](https://github.com/andrewdstrain/Bot/releases/tag/1.0) section.
 2. Run it:
 
    ```
-   java -jar labB-1.0-week2-day08.jar
+   java -jar Bot-1.0.jar
    ```
 
 ----
@@ -45,5 +45,19 @@ Be sure you have [Maven](https://maven.apache.org) installed to follow these ins
 4. Then run it by typing:
 
    ```
-   java -jar target/labB-1.0-week2-day08.jar
+   java -jar target/Bot-1.0.jar
    ```
+
+----
+
+## Exceptions
+
+The lab is about exceptions. Conversion with the Bot is as follows:
+
+1. Get input from user
+2. Parse input
+   - Throw an exception if the user enters any naughty words
+3. Given the parsed input, allow the Bot to chat with the user
+   - Throw an exception if the input is not parsed
+
+The [JUnit](https://junit.org/junit5/) [test cases](src/test/java/BotTest.java) cover these exceptions.
