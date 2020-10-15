@@ -1,4 +1,4 @@
-package com.isageek.blaztek.day08.labb;
+package com.isageek.blaztek.bot;
 
 public class MessageNotParsedException extends Exception {
     public MessageNotParsedException() {

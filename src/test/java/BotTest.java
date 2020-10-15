@@ -1,8 +1,7 @@
-import com.isageek.blaztek.day08.labb.Bot;
-import com.isageek.blaztek.day08.labb.MessageNotParsedException;
-import com.isageek.blaztek.day08.labb.NaughtyWordException;
+import com.isageek.blaztek.bot.Bot;
+import com.isageek.blaztek.bot.MessageNotParsedException;
+import com.isageek.blaztek.bot.NaughtyWordException;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.is-a-geek.blaztek.day08</groupId>
-    <artifactId>labB</artifactId>
-    <version>1.0-week2-day08</version>
+    <groupId>com.is-a-geek.blaztek</groupId>
+    <artifactId>Bot</artifactId>
+    <version>1.0</version>
 
     <build>
         <plugins>
@@ -17,7 +17,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.isageek.blaztek.day08.labb.Chat</mainClass>
+                            <mainClass>com.isageek.blaztek.bot.Chat</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

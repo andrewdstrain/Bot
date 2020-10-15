@@ -1,4 +1,4 @@
-package com.isageek.blaztek.day08.labb;
+package com.isageek.blaztek.bot;
 
 public class Chat implements Runnable {
     public static void main(String[] args) {

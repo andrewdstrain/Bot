@@ -5,7 +5,7 @@ The lab text says:
 > Create your own exceptions and test them. **Add to Github**
 
 Feel free to _talk_ to the Bot. It has a very limited amount of phrases. If you give it a phrase that it doesn't
-understand, it recites poetry to you. Check out the [Bot.java](src/main/java/com/isageek/blaztek/day08/labb/Bot.java)
+understand, it recites poetry to you. Check out the [Bot.java](src/main/java/com/isageek/blaztek/bot/Bot.java)
 file in the `chat` method for the list of phrases that it understands.
 
 To exit, press the `EOF` character on your keyboard. On macOS/Linux it is CTRL-D. On Windows, it is CTRL-Z followed by
