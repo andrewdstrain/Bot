@@ -10,12 +10,16 @@ public class BotTest {
     @Test
     void mrRoboto() {
         Bot bot = new Bot();
-        String message = "   Hello   there  !   ";
+        String message = "   How   are  you  ?   ";
 
         Assertions.assertDoesNotThrow(() -> {
             String parsedMessage = bot.parseInput(message);
-            Assertions.assertEquals("hello there", parsedMessage);
+            Assertions.assertEquals("how are you", parsedMessage);
             Assertions.assertDoesNotThrow(() -> bot.chat(parsedMessage));
+
+            String pm = bot.parseInput("Who do you love?");
+            Assertions.assertEquals("who do you love", pm);
+            Assertions.assertDoesNotThrow(() -> bot.chat(pm));
         });
 
         Assertions.assertThrows(NaughtyWordException.class, () -> bot.parseInput("WTF?"));
