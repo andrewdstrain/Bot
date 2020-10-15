@@ -31,18 +31,13 @@ no apparent reason. Please run via cmd (Windows) or terminal (macOS/Linux).
 
 Be sure you have [Maven](https://maven.apache.org) installed to follow these instructions.
 
-1. Clone this repo. Unfortunately, it has everything in one repository.
-2. From the base (root) folder, type:
-
-   ```
-   cd week2/day08/labB
-   ```
-3. To create the JAR file, type:
+1. Clone this repo.
+2. To create the JAR file, type:
 
    ```
    mvn package
    ```
-4. Then run it by typing:
+3. Then run it by typing:
 
    ```
    java -jar target/Bot-1.0.jar
