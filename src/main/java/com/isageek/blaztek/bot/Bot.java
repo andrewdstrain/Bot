@@ -69,8 +69,20 @@ public class Bot {
             log.println("My name is Bot. Who are you?");
         } else if (message.equals("what is your name")) {
             log.println("My name is Bot. What is your name?");
-        } else if (message.startsWith("i am") || message.startsWith("my name is")) {
-            log.println("Nice ot meet you!");
+        } else if (message.startsWith("i am")) {
+            if (message.length() > 5) {
+                String name = message.substring(5, 6).toUpperCase() + message.substring(6);
+                log.println("Nice ot meet you " + name + "!");
+            } else {
+                recite();
+            }
+        } else if (message.startsWith("my name is")) {
+            if (message.length() > 11) {
+                String name = message.substring(11, 12).toUpperCase() + message.substring(12);
+                log.println("Nice ot meet you " + name + "!");
+            } else {
+                recite();
+            }
         } else if (message.equals("sad")) {
             log.println("Indeed");
         } else if (message.equals("you can't") || message.equals("you can not")) {
