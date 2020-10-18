@@ -5,12 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Bot {
+    private static final List<String> wirtyDords = Arrays.asList("damn", "wtf", "fu");  // Keeping it clean for school
+    private static final List<String> roses = Arrays.asList("Roses are red.", "Violets are blue.", "I don't have a heart.", "How can I love you?");
     private final PrintStream log;
     private String parsedMessage;
     private int line;
-
-    private static final List<String> wirtyDords = Arrays.asList("damn", "wtf", "fu");  // Keeping it clean for school
-    private static final List<String> roses = Arrays.asList("Roses are red.", "Violets are blue.", "I don't have a heart.", "How can I love you?");
 
     public Bot() {
         super();
@@ -49,7 +48,7 @@ public class Bot {
             if (message != null) {
                 throw new MessageNotParsedException();
             }
-        } else if (! parsedMessage.equals(message)) {
+        } else if (!parsedMessage.equals(message)) {
             throw new MessageNotParsedException();
         }
 

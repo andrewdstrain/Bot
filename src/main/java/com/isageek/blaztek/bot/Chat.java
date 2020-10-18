@@ -19,12 +19,12 @@ public class Chat implements Runnable {
             prompt();
             String text = bot.getInput();
 
-                try {
-                    text = bot.parseInput(text);
-                } catch (NaughtyWordException ex) {
-                    System.err.println(ex.getMessage());
-                    continue;
-                }
+            try {
+                text = bot.parseInput(text);
+            } catch (NaughtyWordException ex) {
+                System.err.println(ex.getMessage());
+                continue;
+            }
 
             try {
                 bot.chat(text);
